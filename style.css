@@ -28,6 +28,85 @@ section {
     padding: 0;
 }
 
+#presentation {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+#presentation h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.presentation-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.presentation-content p {
+    margin: 10px 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+.presentation-content .intro {
+    font-size: 18px;
+}
+
+.presentation-content strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.presentation-content .qualites,
+.presentation-content .apprentissage {
+    background-color: #fff;
+    padding: 12px;
+    border-left: 4px solid #3498db;
+    margin-left: 10px;
+    border-radius: 0 4px 4px 0;
+}
+
+#formation {
+    margin-bottom: 30px;
+}
+
+.formation-item {
+    display: flex;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.formation-date {
+    font-weight: bold;
+    color: #2c3e50;
+    min-width: 100px;
+    font-size: 16px;
+}
+
+.formation-content {
+    flex: 1;
+}
+
+.formation-content h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 18px;
+}
+
+.formation-content p {
+    margin: 5px 0;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+
 #competences li {
     background: #f4f4f4;
     padding: 8px;
