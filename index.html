@@ -9,7 +9,7 @@
 <body>
     <header>
         <h1>Thomas Cagnion</h1>
-        <p>Développeur Web Junior</p>
+        <p>Développeur Junior</p>
     </header>
 
     <section id="presentation">
@@ -35,7 +35,11 @@
 
     <section id="formation">
     <h2>Formation</h2>
-
+    <div class="formation-header" onclick="toggleFormation()">
+        <span>Voir mes Formation</span>
+        <span class="plus-icon formation-icon">+</span>
+    </div>
+    <ul id="formation-list" class="hidden">
     <div class="formation-item">
         <div class="formation-date">2025</div>
         <div class="formation-content">
@@ -59,9 +63,25 @@
             <p>Option Informatique - Lycée Jules Verne, Mondeville</p>
         </div>
     </div>
+    </ul>
 </section>
 
-    <section id="competences">
+<section id="competences">
+    <h2>Compétences</h2>
+    <div class="competence-header" onclick="toggleCompetences()">
+        <span>Voir mes compétences</span>
+        <span class="plus-icon competences-icon">+</span>
+    </div>
+    <ul id="competence-list" class="hidden">
+        <li>HTML/CSS</li>
+        <li>JavaScript</li>
+        <li>Git/GitHub</li>
+        <li>C++</li>
+        <li>Python</li>
+        <li>Anglais niveau C1 + Anglais Technique</li>
+    </ul>
+</section>
+    <!--<section id="competences">
     <h2>Compétences</h2>
     <ul>
         <li>HTML/CSS</li>
@@ -71,7 +91,7 @@
         <li>Python</li>
         <li>Anglais technique</li>
     </ul>
-</section>
+</section>--> 
 
     <section id="contact">
         <h2>Contact</h2>
@@ -82,5 +102,31 @@
     <footer>
         <p>© 2025 -Thomas Cagnion</p>
     </footer>
+    <script>
+    function toggleCompetences() {
+        const list = document.getElementById("competence-list");
+        const icon = document.querySelector(".competences-icon");
+
+        if (list.classList.contains("hidden")) {
+            list.classList.remove("hidden");
+            icon.textContent = "−"; // Change le + en −
+        } else {
+            list.classList.add("hidden");
+            icon.textContent = "+"; // Change le − en +
+        }
+    }
+    function toggleFormation() {
+        const list = document.getElementById("formation-list");
+        const icon = document.querySelector(".formation-icon");
+
+        if (list.classList.contains("hidden")) {
+            list.classList.remove("hidden");
+            icon.textContent = "−"; // Change le + en −
+        } else {
+            list.classList.add("hidden");
+            icon.textContent = "+"; // Change le − en +
+        }
+    }
+</script>
 </body>
 </html>

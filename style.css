@@ -23,11 +23,6 @@ section {
     margin-bottom: 30px;
 }
 
-#competences ul {
-    list-style-type: none;
-    padding: 0;
-}
-
 #presentation {
     text-align: center;
     padding: 20px;
@@ -71,9 +66,15 @@ section {
     margin-left: 10px;
     border-radius: 0 4px 4px 0;
 }
-
-#formation {
-    margin-bottom: 30px;
+.formation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 4px;
+    margin-bottom: 10px;
 }
 
 .formation-item {
@@ -105,10 +106,47 @@ section {
     color: #7f8c8d;
     font-style: italic;
 }
+.competence-header, .formation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+
+.competence-header:hover {
+    background-color: #746c8f;
+}
+
+.plus-icon {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.hidden {
+    display: none;
+}
+
+#competence-list {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+#competence-list:not(.hidden) {
+    max-height: 500px; /* Valeur arbitraire pour permettre l'expansion */
+    opacity: 1;
+}
+
 
 
 #competences li {
-    background: #f4f4f4;
+    background: #f0f0f0;
     padding: 8px;
     margin-bottom: 5px;
     border-radius: 4px;
