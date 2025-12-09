@@ -118,8 +118,8 @@ section {
 }
 
 
-.competence-header:hover {
-    background-color: #746c8f;
+.competence-header:hover, .formation-header:hover{
+    background-color: #88cbce;
 }
 
 .plus-icon {
