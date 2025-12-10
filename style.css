@@ -59,6 +59,7 @@ section {
 }
 
 .presentation-content .qualites,
+
 .presentation-content .apprentissage {
     background-color: #fff;
     padding: 12px;
@@ -66,15 +67,73 @@ section {
     margin-left: 10px;
     border-radius: 0 4px 4px 0;
 }
-.formation-header {
+
+
+/* CSS experience*/
+
+#experience-list {
+    display: none; /* Masqué par défaut */
+    animation: slideDown 0.5s ease forwards; /* Animation au démarrage */
+}
+
+#experience-list:not(.hidden) {
+    display: block;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#experience-item {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    padding: 10px;
-    background-color: #f4f4f4;
-    border-radius: 4px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.experience-date {
+    font-weight: bold;
+    color: #2c3e50;
+    min-width: 100px;
+    font-size: 16px;
+}
+
+#experience-content {
+    flex: 1;
+}
+
+.experience-content h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 18px;
+}
+
+.experience-content ul {
+    margin: 5px 0;
+    padding-left: 20px;
+}
+
+.experience-content li {
+    color: #7f8c8d;
+    margin-bottom: 5px;
+}
+
+
+/* CSS formation */
+
+#formation-list {
+    display: none;
+    animation: slideDown 0.5s ease forwards;
+}
+
+#formation-list:not(.hidden) {
+    display: block;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .formation-item {
@@ -106,7 +165,11 @@ section {
     color: #7f8c8d;
     font-style: italic;
 }
-.competence-header, .formation-header {
+
+
+/* CSS competence */
+
+.competence-header, .formation-header, .experience-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -118,7 +181,7 @@ section {
 }
 
 
-.competence-header:hover, .formation-header:hover{
+.competence-header:hover, .formation-header:hover, .experience-header:hover {
     background-color: #88cbce;
 }
 
@@ -133,24 +196,27 @@ section {
 }
 
 #competence-list {
-    transition: max-height 0.3s ease, opacity 0.3s ease;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
+    display: none;
+    animation: slideDown 0.5s ease forwards;
 }
+
 #competence-list:not(.hidden) {
-    max-height: 500px; /* Valeur arbitraire pour permettre l'expansion */
-    opacity: 1;
+    display: block;
 }
 
-
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px);}
+    to { opacity: 1; transform: translateY(0); }
+}
 
 #competences li {
-    background: #f0f0f0;
+    background: #f0f0f0; 
     padding: 8px;
     margin-bottom: 5px;
     border-radius: 4px;
 }
+
+
 
 footer {
     text-align: center;

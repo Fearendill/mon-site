@@ -28,10 +28,36 @@
 </section>
 
 
+
+
     <section id="experience">
         <h2>Expérience professionnelle</h2>
-        <!-- Ajoute tes expériences ici -->
+        <div class="experience-header" onclick="toggleExperience()">
+        <span>Voir mes Experiences</span>
+        <span class="plus-icon experience-icon">+</span>
+    </div>
+    <ul id="experience-list" class="hidden">
+    <div class="experience-item">
+        <div class="experience-date">2023</div>
+        <div class="experience-content">
+            <h3>Stage de fin d’année 1er année BTS 2023(6Semaines)</h3>
+            <li>Programmation en PHP/JavaScript</li>
+            <li>HTML/CSS</li>
+            <li>amélioration du site internet de l’entreprise notamment du frontend</li>
+        </div>
+    </div>
+
+    <div class="experience-item">
+        <div class="experience-date">2018</div>
+        <div class="experience-content">
+            <h3>STAGE de 3eme</h3>
+            <li>Montage d’ordinateur</li>
+            <li>Apprentissage du réseau</li> 
+        </div>
+    </div>
     </section>
+
+
 
     <section id="formation">
     <h2>Formation</h2>
@@ -41,7 +67,7 @@
     </div>
     <ul id="formation-list" class="hidden">
     <div class="formation-item">
-        <div class="formation-date">2025</div>
+        <div class="formation-date">2025 - 20XX</div>
         <div class="formation-content">
             <h3>Accompagnement par la Mission Locale</h3>
             <p>"Un jeune, un emploi"</p>
@@ -75,23 +101,15 @@
     <ul id="competence-list" class="hidden">
         <li>HTML/CSS</li>
         <li>JavaScript</li>
-        <li>Git/GitHub</li>
         <li>C++</li>
         <li>Python</li>
+        <li>Git/GitHub</li>
+        <li>Angular</li>
+        <li>Visual Studio Code</li>
         <li>Anglais niveau C1 + Anglais Technique</li>
     </ul>
 </section>
-    <!--<section id="competences">
-    <h2>Compétences</h2>
-    <ul>
-        <li>HTML/CSS</li>
-        <li>JavaScript</li>
-        <li>Git/GitHub</li>
-        <li>C++</li>
-        <li>Python</li>
-        <li>Anglais technique</li>
-    </ul>
-</section>--> 
+
 
     <section id="contact">
         <h2>Contact</h2>
@@ -103,30 +121,43 @@
         <p>© 2025 -Thomas Cagnion</p>
     </footer>
     <script>
-    function toggleCompetences() {
-        const list = document.getElementById("competence-list");
-        const icon = document.querySelector(".competences-icon");
 
-        if (list.classList.contains("hidden")) {
-            list.classList.remove("hidden");
-            icon.textContent = "−"; // Change le + en −
-        } else {
-            list.classList.add("hidden");
-            icon.textContent = "+"; // Change le − en +
-        }
+    function toggleExperience() {
+    const list = document.getElementById("experience-list");
+    const icon = document.querySelector(".experience-icon");
+    if (list.classList.contains("hidden")) {
+        list.classList.remove("hidden");
+        icon.textContent = "−";
+    } else {
+        list.classList.add("hidden");
+        icon.textContent = "+";
     }
+}
+
+    function toggleCompetences() {
+    const list = document.getElementById("competence-list");
+    const icon = document.querySelector(".competences-icon");
+    if (list.classList.contains("hidden")) {
+        list.classList.remove("hidden");
+        icon.textContent = "−";
+    } else {
+        list.classList.add("hidden");
+        icon.textContent = "+";
+    }
+}
     function toggleFormation() {
         const list = document.getElementById("formation-list");
         const icon = document.querySelector(".formation-icon");
 
         if (list.classList.contains("hidden")) {
             list.classList.remove("hidden");
-            icon.textContent = "−"; // Change le + en −
+            icon.textContent = "−";
         } else {
             list.classList.add("hidden");
-            icon.textContent = "+"; // Change le − en +
+            icon.textContent = "+";
         }
-    }
+}
+
 </script>
 </body>
 </html>
