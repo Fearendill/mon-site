@@ -72,8 +72,8 @@ section {
 /* CSS experience*/
 
 #experience-list {
-    display: none; /* Masqué par défaut */
-    animation: slideDown 0.5s ease forwards; /* Animation au démarrage */
+    display: none;
+    animation: slideDown 0.5s ease forwards;
 }
 
 #experience-list:not(.hidden) {
@@ -131,10 +131,6 @@ section {
     display: block;
 }
 
-@keyframes slideDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
 
 .formation-item {
     display: flex;
@@ -202,11 +198,6 @@ section {
 
 #competence-list:not(.hidden) {
     display: block;
-}
-
-@keyframes slideDown {
-    from { opacity: 0; transform: translateY(-20px);}
-    to { opacity: 1; transform: translateY(0); }
 }
 
 #competences li {
