@@ -61,7 +61,5 @@ function toggleDarkMode() {
             body.classList.add("dark-mode");
             button.innerHTML = '<i class="fas fa-sun"></i> Mode clair';
         }
-
-        // Ajouter un écouteur d'événement au bouton
         button.addEventListener("click", toggleDarkMode);
     });

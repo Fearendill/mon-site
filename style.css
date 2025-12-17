@@ -1,5 +1,6 @@
 /* ===== STYLES GLOBAUX ===== */
 /* Applique les styles de base à tout le corps de la page */
+
 body {
     font-family: Arial, sans-serif; /* Police par défaut */
     line-height: 1.6; /* Espacement entre les lignes */
@@ -12,6 +13,7 @@ body {
     padding: 20px; /* Espacement interne */
     transition: background-color 0.5s ease, color 0.5s ease; /* Animation fluide pour le dark mode */
 }
+
 
 /* Style de l'en-tête */
 header {
