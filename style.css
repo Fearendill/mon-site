@@ -1,234 +1,314 @@
+/* ===== STYLES GLOBAUX ===== */
+/* Applique les styles de base à tout le corps de la page */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    font-family: Arial, sans-serif; /* Police par défaut */
+    line-height: 1.6; /* Espacement entre les lignes */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les espacements internes par défaut */
+    background-color: var(--bg-color); /* Couleur de fond (variable CSS) */
+    color: var(--text-color); /* Couleur du texte (variable CSS) */
+    max-width: 800px; /* Largeur maximale du contenu */
+    margin: 0 auto; /* Centre le contenu horizontalement */
+    padding: 20px; /* Espacement interne */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Animation fluide pour le dark mode */
 }
 
+/* Style de l'en-tête */
 header {
-    text-align: center;
-    padding: 20px 0;
-    border-bottom: 1px solid #eee;
+    text-align: center; /* Centre le texte */
+    padding: 20px 0; /* Espacement interne (haut/bas) */
+    background-color: var(--header-bg); /* Couleur de fond (variable CSS) */
+    border-bottom: 1px solid var(--border-color); /* Bordure inférieure */
 }
+
+/* Style du bouton de téléchargement */
 .download-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    display: inline-block; /* Permet d'appliquer des marges et padding */
+    margin-top: 10px; /* Espacement en haut */
+    padding: 10px 20px; /* Espacement interne */
+    background-color: var(--button-bg); /* Couleur de fond (variable CSS) */
+    color: white; /* Texte en blanc */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    border-radius: 5px; /* Coins arrondis */
+    font-weight: bold; /* Texte en gras */
+    transition: background-color 0.3s ease; /* Animation au survol */
 }
 
 .download-btn:hover {
-    background-color: #2980b9;
+    background-color: var(--button-hover); /* Couleur de fond au survol (variable CSS) */
 }
 
+/* Style des titres h1 et h2 */
 h1, h2 {
-    color: #2c3e50;
+    color: var(--text-color-secondary); /* Couleur des titres (variable CSS) */
 }
 
+/* Style des sections */
 section {
-    margin-bottom: 30px;
+    margin-bottom: 30px; /* Espacement entre les sections */
 }
+
+/* ===== SECTION "PRÉSENTATION" ===== */
 
 #presentation {
-    text-align: center;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    margin-bottom: 30px;
+    text-align: center; /* Centre le texte */
+    padding: 20px; /* Espacement interne */
+    background-color: var(--section-bg); /* Couleur de fond (variable CSS) */
+    border-radius: 8px; /* Coins arrondis */
+    margin-bottom: 30px; /* Espacement en bas */
 }
 
 #presentation h2 {
-    color: #2c3e50;
-    margin-bottom: 15px;
-    font-size: 24px;
+    color: var(--text-color-secondary); /* Couleur du titre */
+    margin-bottom: 15px; /* Espacement en bas */
+    font-size: 24px; /* Taille de la police */
 }
 
+/* Style du contenu de la présentation */
 .presentation-content {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
+    max-width: 600px; /* Largeur maximale */
+    margin: 0 auto; /* Centre le contenu */
+    text-align: left; /* Aligne le texte à gauche */
 }
 
 .presentation-content p {
-    margin: 10px 0;
-    line-height: 1.6;
-    color: #555;
+    margin: 10px 0; /* Espacement (haut/bas) */
+    line-height: 1.6; /* Espacement entre les lignes */
+    color: #555; /* Couleur du texte (gris) */
 }
 
 .presentation-content .intro {
-    font-size: 18px;
+    font-size: 18px; /* Taille de la police pour l'introduction */
 }
 
 .presentation-content strong {
-    color: #2c3e50;
-    font-weight: 600;
+    color: var(--text-color-secondary); /* Couleur des mots en gras (variable CSS) */
+    font-weight: 600; /* Gras */
 }
 
+/* Style des paragraphes "qualités" et "apprentissage" */
 .presentation-content .qualites,
-
 .presentation-content .apprentissage {
-    background-color: #fff;
-    padding: 12px;
-    border-left: 4px solid #3498db;
-    margin-left: 10px;
-    border-radius: 0 4px 4px 0;
+    background-color: var(--bg-color); /* Couleur de fond (variable CSS) */
+    padding: 12px; /* Espacement interne */
+    border-left: 4px solid #3498db; /* Bordure gauche bleue */
+    margin-left: 10px; /* Espacement à gauche */
+    border-radius: 0 4px 4px 0; /* Coins arrondis (uniquement à droite) */
+}
+
+/* ===== ANIMATIONS ===== */
+/* Animation pour l'affichage des sections (dépliant) */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); } /* État initial (invisible et décalé vers le haut) */
+    to { opacity: 1; transform: translateY(0); } /* État final (visible et à sa place) */
 }
 
 
-/* CSS experience*/
+/* ===== SECTION "EXPÉRIENCE" ===== */
+/* Masque la liste des expériences par défaut */
+
 
 #experience-list {
-    display: none;
-    animation: slideDown 0.5s ease forwards;
+    display: none; /* Masqué */
+    animation: slideDown 0.5s ease forwards; /* Animation au démarrage */
 }
 
+/* Affiche la liste des expériences */
 #experience-list:not(.hidden) {
-    display: block;
+    display: block; /* Affiche en bloc */
 }
 
-@keyframes slideDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
+/* Style des items d'expérience (corrigé : doit être .experience-item) */
 #experience-item {
-    display: flex;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #eee;
+    display: flex; /* Affiche les enfants en ligne (date + contenu) */
+    margin-bottom: 20px; /* Espacement en bas */
+    padding-bottom: 15px; /* Espacement interne (bas) */
+    border-bottom: 1px solid #eee; /* Bordure inférieure */
 }
 
+/* Style de la date */
 .experience-date {
-    font-weight: bold;
-    color: #2c3e50;
-    min-width: 100px;
-    font-size: 16px;
+    font-weight: bold; /* Gras */
+    color: var(--text-color-secondary); /* Couleur du texte (variable CSS) */
+    min-width: 100px; /* Largeur minimale */
+    font-size: 16px; /* Taille de la police */
 }
 
+/* Style du contenu (corrigé : doit être .experience-content) */
 #experience-content {
-    flex: 1;
+    flex: 1; /* Prend tout l'espace restant */
 }
 
 .experience-content h3 {
-    margin-top: 0;
-    color: #2c3e50;
-    font-size: 18px;
+    margin-top: 0; /* Supprime l'espace en haut */
+    color: var(--text-color-secondary); /* Couleur du titre */
+    font-size: 18px; /* Taille de la police */
 }
 
+/* Style des listes dans le contenu */
 .experience-content ul {
-    margin: 5px 0;
-    padding-left: 20px;
+    margin: 5px 0; /* Espacement (haut/bas) */
+    padding-left: 20px; /* Espacement à gauche */
 }
 
 .experience-content li {
-    color: #7f8c8d;
-    margin-bottom: 5px;
+    color: #7f8c8d; /* Couleur du texte (gris) */
+    margin-bottom: 5px; /* Espacement en bas */
 }
 
 
-/* CSS formation */
+/* ===== SECTION "FORMATION" ===== */
+/* Masque la liste des formations par défaut */
+
 
 #formation-list {
-    display: none;
-    animation: slideDown 0.5s ease forwards;
+    display: none; /* Masqué */
+    animation: slideDown 0.5s ease forwards; /* Animation au démarrage */
 }
 
+/* Affiche la liste des formations */
 #formation-list:not(.hidden) {
-    display: block;
+    display: block; /* Affiche en bloc */
 }
 
-
+/* Style des items de formation */
 .formation-item {
-    display: flex;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #eee;
+    display: flex; /* Affiche les enfants en ligne (date + contenu) */
+    margin-bottom: 20px; /* Espacement en bas */
+    padding-bottom: 15px; /* Espacement interne (bas) */
+    border-bottom: 1px solid #eee; /* Bordure inférieure */
 }
 
+/* Style de la date */
 .formation-date {
-    font-weight: bold;
-    color: #2c3e50;
-    min-width: 100px;
-    font-size: 16px;
+    font-weight: bold; /* Gras */
+    color: #2c3e50; /* Couleur du texte (bleu foncé) */
+    min-width: 100px; /* Largeur minimale */
+    font-size: 16px; /* Taille de la police */
 }
 
 .formation-content {
-    flex: 1;
+    flex: 1; /* Prend tout l'espace restant */
 }
 
 .formation-content h3 {
-    margin-top: 0;
-    color: #2c3e50;
-    font-size: 18px;
+    margin-top: 0; /* Supprime l'espace en haut */
+    color: #2c3e50; /* Couleur du titre (bleu foncé) */
+    font-size: 18px; /* Taille de la police */
 }
 
 .formation-content p {
-    margin: 5px 0;
-    color: #7f8c8d;
-    font-style: italic;
+    margin: 5px 0; /* Espacement (haut/bas) */
+    color: #7f8c8d; /* Couleur du texte (gris) */
+    font-style: italic; /* Texte en italique */
 }
 
 
-/* CSS competence */
+/* ===== SECTION "COMPÉTENCES" ===== */
+/* Style des en-têtes cliquables (compétences, formation, expérience) */
+
 
 .competence-header, .formation-header, .experience-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    padding: 10px;
-    background-color: #f4f4f4;
-    border-radius: 4px;
-    margin-bottom: 10px;
+    display: flex; /* Affiche les enfants en ligne (texte + icône) */
+    justify-content: space-between; /* Espace entre le texte et l'icône */
+    align-items: center; /* Centre verticalement */
+    cursor: pointer; /* Curseur "main" au survol */
+    padding: 10px; /* Espacement interne */
+    background-color: var(--section-bg); /* Couleur de fond (variable CSS) */
+    border-radius: 4px; /* Coins arrondis */
+    margin-bottom: 10px; /* Espacement en bas */
 }
 
-
+/* Effet au survol des en-têtes */
 .competence-header:hover, .formation-header:hover, .experience-header:hover {
-    background-color: #88cbce;
+    background-color: var(--button-hover); /* Couleur de fond au survol (variable CSS) */
 }
 
+/* Style de l'icône + */
 .plus-icon {
-    font-size: 20px;
-    font-weight: bold;
-    color: #2c3e50;
+    font-size: 20px; /* Taille de l'icône */
+    font-weight: bold; /* Gras */
+    color: var(--text-color-secondary); /* Couleur de l'icône (variable CSS) */
 }
 
+/* Classe pour masquer les éléments */
 .hidden {
-    display: none;
+    display: none; /* Masqué */
 }
 
+/* Masque la liste des compétences par défaut */
 #competence-list {
-    display: none;
-    animation: slideDown 0.5s ease forwards;
+    display: none; /* Masqué */
+    animation: slideDown 0.5s ease forwards; /* Animation au démarrage */
 }
 
+/* Affiche la liste des compétences */
 #competence-list:not(.hidden) {
-    display: block;
+    display: block; /* Affiche en bloc */
 }
 
+/* Style des items de compétences */
 #competences li {
-    background: #f0f0f0; 
-    padding: 8px;
-    margin-bottom: 5px;
-    border-radius: 4px;
+    background-color: var(--section-bg); /* Couleur de fond (variable CSS) */
+    padding: 8px; /* Espacement interne */
+    margin-bottom: 5px; /* Espacement en bas */
+    border-radius: 4px; /* Coins arrondis */
 }
 
 
+/* ===== BOUTON DARK MODE ===== */
 
+.mode-btn {
+    display: inline-block; /* Permet d'appliquer des marges et padding */
+    margin-top: 10px; /* Espacement en haut */
+    padding: 10px 15px; /* Espacement interne */
+    background-color: var(--section-bg); /* Couleur de fond (variable CSS) */
+    color: var(--text-color); /* Couleur du texte (variable CSS) */
+    border: 1px solid var(--border-color); /* Bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur "main" au survol */
+    transition: background-color 0.3s ease; /* Animation au survol */
+}
+
+.mode-btn:hover {
+    background-color: var(--header-bg); /* Couleur de fond au survol (variable CSS) */
+}
+
+.mode-btn i {
+    margin-right: 8px; /* Espacement à droite de l'icône */
+}
+
+/* Style du pied de page */
 footer {
-    text-align: center;
-    padding: 20px 0;
-    border-top: 1px solid #eee;
-    margin-top: 30px;
+    text-align: center; /* Centre le texte */
+    padding: 20px 0; /* Espacement interne (haut/bas) */
+    border-top: 1px solid #eee; /* Bordure supérieure */
+    margin-top: 30px; /* Espacement en haut */
 }
 
 
+/* ===== VARIABLES CSS ===== */
+/* Variables pour le mode clair (par défaut) */
+
+:root {
+    --bg-color: #ffffff; /* Fond blanc */
+    --text-color: #333333; /* Texte noir */
+    --text-color-secondary: #2c3e50; /* Bleu foncé */
+    --section-bg: #f9f9f9; /* Fond gris clair */
+    --header-bg: #f4f4f4; /* Fond gris clair pour l'en-tête */
+    --border-color: #eeeeee; /* Bordures grises */
+    --button-bg: #3498db; /* Bleu pour les boutons */
+    --button-hover: #2980b9; /* Bleu foncé au survol */
+}
+
+/* Variables pour le mode sombre */
+.dark-mode {
+    --bg-color: #1a1a1a; /* Fond noir */
+    --text-color: #f0f0f0; /* Texte blanc */
+    --text-color-secondary: #608ab4; /* Bleu clair */
+    --section-bg: #252525; /* Fond gris foncé */
+    --header-bg: #2d2d2d; /* Fond gris foncé pour l'en-tête */
+    --border-color: #444444; /* Bordures grises foncées */
+    --button-bg: #4a6baf; /* Bleu foncé pour les boutons */
+    --button-hover: #3a5a9f; /* Bleu plus foncé au survol */
+}
