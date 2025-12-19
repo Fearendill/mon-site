@@ -108,3 +108,15 @@ document.addEventListener("DOMContentLoaded", function() {
     // Ajoute l’événement clic sur le bouton
     button.addEventListener("click", toggleDarkMode);
 });
+
+const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+function applySystemTheme(e) {
+    document.body.classList.toggle("dark", e.matches);
+}
+
+// Appliquer au chargement
+applySystemTheme(mediaQuery);
+
+// Écouter les changements
+mediaQuery.addEventListener("change", applySystemTheme);
