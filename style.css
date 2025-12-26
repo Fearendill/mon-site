@@ -1,6 +1,28 @@
 /* ===== STYLES GLOBAUX ===== */
 /* Applique les styles de base à tout le corps de la page */
 
+:root {
+    --bg-color: #ffffff; /* Fond blanc */
+    --text-color: #333333; /* Texte noir */
+    --text-color-secondary: #2c3e50; /* Bleu foncé */
+    --section-bg: #f9f9f9; /* Fond gris clair */
+    --header-bg: #f4f4f4; /* Fond gris clair pour l'en-tête */
+    --border-color: #eeeeee; /* Bordures grises */
+    --button-bg: #3498db; /* Bleu pour les boutons */
+    --button-hover: #2980b9; /* Bleu foncé au survol */
+}
+
+.dark-mode {
+    --bg-color: #1a1a1a; /* Fond noir */
+    --text-color: #f0f0f0; /* Texte blanc */
+    --text-color-secondary: #5bc9c9; /* Bleu clair */
+    --section-bg: #252525; /* Fond gris foncé */
+    --header-bg: #2d2d2d; /* Fond gris foncé pour l'en-tête */
+    --border-color: #444444; /* Bordures grises foncées */
+    --button-bg: #4a6baf; /* Bleu foncé pour les boutons */
+    --button-hover: #3a5a9f; /* Bleu plus foncé au survol */
+}
+
 body {
     font-family: Arial, sans-serif; /* Police par défaut */
     line-height: 1.6; /* Espacement entre les lignes */
@@ -23,22 +45,6 @@ header {
     border-bottom: 1px solid var(--border-color); /* Bordure inférieure */
 }
 
-/* Style du bouton de téléchargement */
-.download-btn {
-    display: inline-block; /* Permet d'appliquer des marges et padding */
-    margin-top: 10px; /* Espacement en haut */
-    padding: 10px 20px; /* Espacement interne */
-    background-color: var(--button-bg); /* Couleur de fond (variable CSS) */
-    color: white; /* Texte en blanc */
-    text-decoration: none; /* Supprime le soulignement des liens */
-    border-radius: 5px; /* Coins arrondis */
-    font-weight: bold; /* Texte en gras */
-    transition: background-color 0.3s ease; /* Animation au survol */
-}
-
-.download-btn:hover {
-    background-color: var(--button-hover); /* Couleur de fond au survol (variable CSS) */
-}
 
 /* Style des titres h1 et h2 */
 h1, h2 {
@@ -255,25 +261,64 @@ section {
 }
 
 
-/* ===== BOUTON DARK MODE ===== */
+/* ===== BOUTON ===== */
 
-.mode-btn {
+.download-btn {
     display: inline-block; /* Permet d'appliquer des marges et padding */
     margin-top: 10px; /* Espacement en haut */
-    padding: 10px 15px; /* Espacement interne */
+    padding: 10px 20px; /* Espacement interne */
+    background-color: var(--button-bg); /* Couleur de fond (variable CSS) */
+    color: white; /* Texte en blanc */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    border-radius: 5px; /* Coins arrondis */
+    font-weight: bold; /* Texte en gras */
+    transition: background-color 0.3s ease; /* Animation au survol */
+}
+
+.download-btn:hover {
+    background-color: var(--button-hover); /* Couleur de fond au survol (variable CSS) */
+}
+
+
+.CouleurButton {
+    display: inline-block;
+    width: 65px;           /* Largeur du bouton */
+    height: 65px;          /* Hauteur identique pour faire un cercle */
+    margin: auto;           /* Centrer éventuellement */
+    padding: 0;             /* Pas de padding interne (déjà géré par width/height) */
+    background-color: var(--section-bg);
+    color: var(--text-color);
+    font-size: 30px;        /* Taille de l’icône ou du texte */
+    border: auto;           /* Pas de bordure */
+    border-radius: 50%;     /* Rond parfait */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+}
+
+.CouleurButton:hover {
+    background-color: var(--header-bg); /* Couleur de fond au survol (variable CSS) */
+}
+
+.AnglaisButton {
+    display: inline-block; /* Permet d'appliquer des marges et padding */
+    margin-top: auto; /* Espacement en haut */
+    padding: 15px 15px; /* Espacement interne */
     background-color: var(--section-bg); /* Couleur de fond (variable CSS) */
     color: var(--text-color); /* Couleur du texte (variable CSS) */
-    border: 1px solid var(--border-color); /* Bordure */
-    border-radius: 5px; /* Coins arrondis */
+    border: none var(--border-color); /* Bordure */
+    border-radius: 15px; /* Coins arrondis */
     cursor: pointer; /* Curseur "main" au survol */
     transition: background-color 0.3s ease; /* Animation au survol */
 }
 
-.mode-btn:hover {
+.AnglaisButton:hover {
     background-color: var(--header-bg); /* Couleur de fond au survol (variable CSS) */
 }
 
-.mode-btn i {
+.AnglaisButton i {
     margin-right: 8px; /* Espacement à droite de l'icône */
 }
 
@@ -283,31 +328,4 @@ footer {
     padding: 20px 0; /* Espacement interne (haut/bas) */
     border-top: 1px solid #eee; /* Bordure supérieure */
     margin-top: 30px; /* Espacement en haut */
-}
-
-
-/* ===== VARIABLES CSS ===== */
-/* Variables pour le mode clair (par défaut) */
-
-:root {
-    --bg-color: #ffffff; /* Fond blanc */
-    --text-color: #333333; /* Texte noir */
-    --text-color-secondary: #2c3e50; /* Bleu foncé */
-    --section-bg: #f9f9f9; /* Fond gris clair */
-    --header-bg: #f4f4f4; /* Fond gris clair pour l'en-tête */
-    --border-color: #eeeeee; /* Bordures grises */
-    --button-bg: #3498db; /* Bleu pour les boutons */
-    --button-hover: #2980b9; /* Bleu foncé au survol */
-}
-
-/* Variables pour le mode sombre */
-.dark-mode {
-    --bg-color: #1a1a1a; /* Fond noir */
-    --text-color: #f0f0f0; /* Texte blanc */
-    --text-color-secondary: #5bc9c9; /* Bleu clair */
-    --section-bg: #252525; /* Fond gris foncé */
-    --header-bg: #2d2d2d; /* Fond gris foncé pour l'en-tête */
-    --border-color: #444444; /* Bordures grises foncées */
-    --button-bg: #4a6baf; /* Bleu foncé pour les boutons */
-    --button-hover: #3a5a9f; /* Bleu plus foncé au survol */
 }

@@ -75,14 +75,14 @@ function toggleDarkMode() {
         // Désactive le mode sombre
         body.classList.remove("dark-mode");
         // Change le texte et l’icône du bouton
-        button.innerHTML = '<i class="fas fa-moon"></i> Mode sombre';
+        button.innerHTML = '<i class="fas fa-moon"></i>';
         // Sauvegarde la préférence dans le localStorage
         localStorage.setItem("darkMode", "false");
     } else {
         // Active le mode sombre
         body.classList.add("dark-mode");
         // Change le texte et l’icône du bouton
-        button.innerHTML = '<i class="fas fa-sun"></i> Mode clair';
+        button.innerHTML = '<i class="fas fa-sun"></i>';
         // Sauvegarde la préférence dans le localStorage
         localStorage.setItem("darkMode", "true");
     }
@@ -102,21 +102,20 @@ document.addEventListener("DOMContentLoaded", function() {
         // Active le mode sombre
         body.classList.add("dark-mode");
         // Met à jour le bouton
-        button.innerHTML = '<i class="fas fa-sun"></i> Mode clair';
+        button.innerHTML = '<i class="fas fa-sun"></i>';
     }
 
     // Ajoute l’événement clic sur le bouton
     button.addEventListener("click", toggleDarkMode);
 });
 
-const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
-function applySystemTheme(e) {
-    document.body.classList.toggle("dark", e.matches);
+function switchToEnglish() {
+    const button = document.getElementById("SwitchAnglais");
+    if (button.textContent.includes("Switch Anglais")) {
+        window.location.href = "index_en.html";
+    } else {
+        window.location.href = "index.html";
+    }
 }
 
-// Appliquer au chargement
-applySystemTheme(mediaQuery);
-
-// Écouter les changements
-mediaQuery.addEventListener("change", applySystemTheme);
+document.getElementById("SwitchAnglais").addEventListener("click", switchToEnglish);
