@@ -3,126 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon CV en ligne - Thomas Cagnion</title>
+    <title id="page-title">Mon CV en ligne - Thomas Cagnion</title>
 </head>
 <body>
     <header>
         <h1>Thomas Cagnion</h1>
-        <p>Développeur Junior</p>
+        <p id="job-title">Développeur Junior</p>
         <link rel="stylesheet" href="style.css" >
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </header>
 
     <section id="presentation">
-    <h2>À propos de moi</h2>
-    <div class="presentation-content">
-        <p class="intro">
-            Bonjour, je m’appelle <strong>Thomas</strong>, jeune diplômé passionné par la programmation et à la recherche d’un emploi dans ce domaine.
-        </p>
-        <p class="qualites">
-            <strong>Déterminé, sérieux et autonome</strong>, je suis conscient des défis qui m’attendent et prêt à relever les missions qui me seront confiées avec rigueur et engagement.
-        </p>
-        <p class="apprentissage">
-            <strong>Patient et avide d’apprendre</strong>, je sais écouter les remarques et m’adapter pour progresser continuellement.
-        </p>
-    </div>
-</section>
-
-
-
-
-    <section id="experience">
-        <h2>Expérience professionnelle</h2>
-        <div class="experience-header" onclick="toggleExperience()">
-        <span>Voir mes Experiences</span>
-        <span class="plus-icon experience-icon">+</span>
-    </div>
-    <ul id="experience-list" class="hidden">
-    <div class="experience-item">
-        <div class="experience-date">2023</div>
-        <div class="experience-content">
-            <h3>Stage de fin d’année 1er année BTS 2023(6Semaines)</h3>
-            <li>Programmation en PHP/JavaScript</li>
-            <li>HTML/CSS</li>
-            <li>amélioration du site internet de l’entreprise notamment du frontend</li>
+        <h2 id="about-me-title">À propos de moi</h2>
+        <div class="presentation-content">
+            <p id="about-me-intro" class="intro">
+                Bonjour, je m’appelle <strong>Thomas</strong>, jeune diplômé passionné par la programmation et à la recherche d’un emploi dans ce domaine.
+            </p>
+            <p id="about-me-qualities" class="qualites">
+                <strong>Déterminé, sérieux et autonome</strong>, je suis conscient des défis qui m’attendent et prêt à relever les missions qui me seront confiées avec rigueur et engagement.
+            </p>
+            <p id="about-me-learning" class="apprentissage">
+                <strong>Patient et avide d’apprendre</strong>, je sais écouter les remarques et m’adapter pour progresser continuellement.
+            </p>
         </div>
-    </div>
-
-    <div class="experience-item">
-        <div class="experience-date">2018</div>
-        <div class="experience-content">
-            <h3>STAGE de 3eme</h3>
-            <li>Montage d’ordinateur</li>
-            <li>Apprentissage du réseau</li> 
-        </div>
-    </div>
     </section>
 
-
+    <section id="experience">
+        <h2 id="experience-title">Expérience professionnelle</h2>
+        <div class="experience-header" onclick="toggleExperience()">
+            <span id="see-experiences">Voir mes Expériences</span>
+            <span class="plus-icon experience-icon">+</span>
+        </div>
+        <ul id="experience-list" class="hidden">
+            <div class="experience-item">
+                <div class="experience-date">2023</div>
+                <div class="experience-content">
+                    <h3 id="experience-1-title">Stage de fin d'année 1er année BTS 2023 (6 semaines)</h3>
+                    <li id="experience-1-task-1">Programmation en PHP/JavaScript</li>
+                    <li id="experience-1-task-2">HTML/CSS</li>
+                    <li id="experience-1-task-3">Amélioration du site internet de l'entreprise notamment du frontend</li>
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-date">2018</div>
+                <div class="experience-content">
+                    <h3 id="experience-2-title">Stage de 3ème</h3>
+                    <li id="experience-2-task-1">Montage d'ordinateur</li>
+                    <li id="experience-2-task-2">Apprentissage du réseau</li>
+                </div>
+            </div>
+        </ul>
+    </section>
 
     <section id="formation">
-    <h2>Formation</h2>
-    <div class="formation-header" onclick="toggleFormation()">
-        <span>Voir mes Formation</span>
-        <span class="plus-icon formation-icon">+</span>
-    </div>
-    <ul id="formation-list" class="hidden">
-    <div class="formation-item">
-        <div class="formation-date">2025 - 20XX</div>
-        <div class="formation-content">
-            <h3>Accompagnement par la Mission Locale</h3>
-            <p>"Un jeune, un emploi"</p>
+        <h2 id="education-title">Formation</h2>
+        <div class="formation-header" onclick="toggleFormation()">
+            <span id="see-education">Voir mes Formations</span>
+            <span class="plus-icon formation-icon">+</span>
         </div>
-    </div>
+        <ul id="formation-list" class="hidden">
+            <div class="formation-item">
+                <div class="formation-date">2025 - 20XX</div>
+                <div class="formation-content">
+                    <h3 id="education-1-title">Accompagnement par la Mission Locale</h3>
+                    <p id="education-1-desc">"Un jeune, un emploi"</p>
+                </div>
+            </div>
+            <div class="formation-item">
+                <div class="formation-date">2022 - 2024</div>
+                <div class="formation-content">
+                    <h3 id="education-2-title">BTS Système Numérique</h3>
+                    <p id="education-2-desc">Informatique et Réseau - Lycée Jules Verne, Mondeville</p>
+                </div>
+            </div>
+            <div class="formation-item">
+                <div class="formation-date">2019 - 2022</div>
+                <div class="formation-content">
+                    <h3 id="education-3-title">BAC STI2D</h3>
+                    <p id="education-3-desc">Option Informatique - Lycée Jules Verne, Mondeville</p>
+                </div>
+            </div>
+        </ul>
+    </section>
 
-    <div class="formation-item">
-        <div class="formation-date">2022 - 2024</div>
-        <div class="formation-content">
-            <h3>BTS Système Numérique</h3>
-            <p>Informatique et Réseau - Lycée Jules Verne, Mondeville</p>
+    <section id="competences">
+        <h2 id="skills-title">Compétences</h2>
+        <div class="competence-header" onclick="toggleCompetences()">
+            <span id="see-skills">Voir mes compétences</span>
+            <span class="plus-icon competences-icon">+</span>
         </div>
-    </div>
-
-    <div class="formation-item">
-        <div class="formation-date">2019 - 2022</div>
-        <div class="formation-content">
-            <h3>BAC STI2D</h3>
-            <p>Option Informatique - Lycée Jules Verne, Mondeville</p>
-        </div>
-    </div>
-    </ul>
-</section>
-
-<section id="competences">
-    <h2>Compétences</h2>
-    <div class="competence-header" onclick="toggleCompetences()">
-        <span>Voir mes compétences</span>
-        <span class="plus-icon competences-icon">+</span>
-    </div>
-    <ul id="competence-list" class="hidden">
-        <li>HTML/CSS</li>
-        <li>JavaScript</li>
-        <li>C++</li>
-        <li>Python</li>
-        <li>Git/GitHub</li>
-        <li>Angular</li>
-        <li>Visual Studio Code</li>
-        <li>Anglais niveau C1 + Anglais Technique</li>
-    </ul>
-</section>
-
+        <ul id="competence-list" class="hidden">
+            <li id="skill-1">HTML/CSS</li>
+            <li id="skill-2">JavaScript</li>
+            <li id="skill-3">C++</li>
+            <li id="skill-4">Python</li>
+            <li id="skill-5">Git/GitHub</li>
+            <li id="skill-6">Angular</li>
+            <li id="skill-7">Visual Studio Code</li>
+            <li id="skill-8">Anglais niveau C1 + Anglais Technique</li>
+        </ul>
+    </section>
 
     <section id="contact">
-        <h2>Contact</h2>
-        <p>Email : thomas.cagnion@gmail.com</p>
-        <p>Téléphone : +33</p>
+        <h2 id="contact-title">Contact</h2>
+        <p id="contact-email">Email : thomas.cagnion@gmail.com</p>
+        <p id="contact-phone">Téléphone : +33</p>
     </section>
 
     <footer>
-        <p>© 2025 -Thomas Cagnion</p>
-        <a href="assets/Thomas_Cagnion_CV.pdf" download="Thomas_Cagnion_CV.pdf" class="download-btn"> Télécharger mon CV (PDF)</a>
+        <p id="copyright">© 2025 - Thomas Cagnion</p>
+        <a href="assets/Thomas_Cagnion_CV.pdf" download="Thomas_Cagnion_CV.pdf" class="download-btn" id="download-cv">Télécharger mon CV (PDF)</a>
         <button id="dark-mode-toggle" class="CouleurButton"><i class="fas fa-moon"></i></button>
-        <button id="SwitchAnglais" class="AnglaisButton"><i class="fas fa-globe"></i> Switch Anglais</button>
+        <button id="SwitchAnglais" class="AnglaisButton"><i class="fas fa-globe"></i> <span id="language-switch">Switch to English</span></button>
     </footer>
     <script src="app.js"></script>
 </body>
