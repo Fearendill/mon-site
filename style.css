@@ -311,7 +311,7 @@ section {
     border: none var(--border-color); /* Bordure */
     border-radius: 15px; /* Coins arrondis */
     cursor: pointer; /* Curseur "main" au survol */
-    transition: background-color 0.3s ease; /* Animation au survol */
+    transition: all 0.3s ease; /* Animation au survol */
 }
 
 .AnglaisButton:hover {
