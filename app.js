@@ -115,7 +115,6 @@ function switchLanguage() {
         // Si on est sur la version anglaise, on retourne à la française
         window.location.href = "index.html";
     } else {
-        // Si on est sur la version française, on va à l'anglaise
         window.location.href = "index_en.html";
     }
 }
