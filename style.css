@@ -43,6 +43,7 @@ header {
     padding: 20px 0; /* Espacement interne (haut/bas) */
     background-color: var(--header-bg); /* Couleur de fond (variable CSS) */
     border-bottom: 1px solid var(--border-color); /* Bordure inférieure */
+    border-radius: 8px;
 }
 
 
@@ -180,7 +181,7 @@ section {
 }
 
 .experience-content li {
-    color: #7f8c8d; /* Couleur du texte (gris) */
+    color: var(--text-color); /* Couleur du texte (gris) */
     margin-bottom: 5px; /* Espacement en bas */
 }
 
@@ -289,7 +290,7 @@ section {
     background-color: var(--section-bg);
     color: var(--text-color);
     font-size: 30px;        /* Taille de l’icône ou du texte */
-    border: auto;           /* Pas de bordure */
+    border: auto;           /* bordure */
     border-radius: 50%;     /* Rond parfait */
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -305,7 +306,7 @@ section {
     padding: 15px 15px; /* Espacement interne */
     background-color: var(--section-bg); /* Couleur de fond (variable CSS) */
     color: var(--text-color); /* Couleur du texte (variable CSS) */
-    border: none var(--border-color); /* Bordure */
+    border: auto; /* Bordure */
     border-radius: 15px; /* Coins arrondis */
     cursor: pointer; /* Curseur "main" au survol */
     transition: all 0.3s ease; /* Animation au survol */

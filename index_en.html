@@ -1,128 +1,124 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon CV en ligne - Thomas Cagnion</title>
+    <title>My Online CV - Thomas Cagnion</title>
 </head>
 <body>
     <header>
         <h1>Thomas Cagnion</h1>
-        <p>Développeur Junior</p>
+        <p>Junior Developer</p>
         <link rel="stylesheet" href="style.css" >
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     </header>
 
     <section id="presentation">
-    <h2>À propos de moi</h2>
-    <div class="presentation-content">
-        <p class="intro">
-            Bonjour, je m’appelle <strong>Thomas</strong>, jeune diplômé passionné par la programmation et à la recherche d’un emploi dans ce domaine.
-        </p>
-        <p class="qualites">
-            <strong>Déterminé, sérieux et autonome</strong>, je suis conscient des défis qui m’attendent et prêt à relever les missions qui me seront confiées avec rigueur et engagement.
-        </p>
-        <p class="apprentissage">
-            <strong>Patient et avide d’apprendre</strong>, je sais écouter les remarques et m’adapter pour progresser continuellement.
-        </p>
-    </div>
-</section>
-
-
-
-
-    <section id="experience">
-        <h2>Expérience professionnelle</h2>
-        <div class="experience-header" onclick="toggleExperience()">
-        <span>Voir mes Experiences</span>
-        <span class="plus-icon experience-icon">+</span>
-    </div>
-    <ul id="experience-list" class="hidden">
-    <div class="experience-item">
-        <div class="experience-date">2023</div>
-        <div class="experience-content">
-            <h3>Stage de fin d’année 1er année BTS 2023(6Semaines)</h3>
-            <li>Programmation en PHP/JavaScript</li>
-            <li>HTML/CSS</li>
-            <li>amélioration du site internet de l’entreprise notamment du frontend</li>
+        <h2>About Me</h2>
+        <div class="presentation-content">
+            <p class="intro">
+                Hello, my name is <strong>Thomas</strong>, a young graduate passionate about programming and currently looking for a job in this field.
+            </p>
+            <p class="qualites">
+                <strong>Determined, serious and autonomous</strong>, I am aware of the challenges ahead and ready to take on any tasks entrusted to me with rigor and commitment.
+            </p>
+            <p class="apprentissage">
+                <strong>Patient and eager to learn</strong>, I know how to listen to feedback and adapt in order to continuously improve.
+            </p>
         </div>
-    </div>
-
-    <div class="experience-item">
-        <div class="experience-date">2018</div>
-        <div class="experience-content">
-            <h3>STAGE de 3eme</h3>
-            <li>Montage d’ordinateur</li>
-            <li>Apprentissage du réseau</li> 
-        </div>
-    </div>
     </section>
 
+    <section id="experience">
+        <h2>Professional Experience <i class="fa-solid fa-user-tie"></i></h2>
+        <div class="experience-header" onclick="toggleExperience()">
+            <span>View my experience</span>
+            <span class="plus-icon experience-icon">+</span>
+        </div>
+        <ul id="experience-list" class="hidden">
+            <div class="experience-item">
+                <div class="experience-date">2023</div>
+                <div class="experience-content">
+                    <h3>End-of-year internship – 1st year BTS 2023 (6 weeks)</h3>
+                    <li>PHP / JavaScript programming</li>
+                    <li>HTML / CSS</li>
+                    <li>Improvement of the company website, especially the frontend</li>
+                </div>
+            </div>
 
+            <div class="experience-item">
+                <div class="experience-date">2018</div>
+                <div class="experience-content">
+                    <h3>Middle school internship</h3>
+                    <li>Computer assembly</li>
+                    <li>Introduction to networking</li> 
+                </div>
+            </div>
+        </ul>
+    </section>
 
     <section id="formation">
-    <h2>Formation</h2>
-    <div class="formation-header" onclick="toggleFormation()">
-        <span>Voir mes Formation</span>
-        <span class="plus-icon formation-icon">+</span>
-    </div>
-    <ul id="formation-list" class="hidden">
-    <div class="formation-item">
-        <div class="formation-date">2025 - 20XX</div>
-        <div class="formation-content">
-            <h3>Accompagnement par la Mission Locale</h3>
-            <p>"Un jeune, un emploi"</p>
+        <h2>Education <i class="fa-solid fa-graduation-cap"></i></h2>
+        <div class="formation-header" onclick="toggleFormation()">
+            <span>View my education</span>
+            <span class="plus-icon formation-icon">+</span>
         </div>
-    </div>
+        <ul id="formation-list" class="hidden">
+            <div class="formation-item">
+                <div class="formation-date">2025 - 20XX</div>
+                <div class="formation-content">
+                    <h3>Support by Mission Locale</h3>
+                    <p>"One young person, one job"</p>
+                </div>
+            </div>
 
-    <div class="formation-item">
-        <div class="formation-date">2022 - 2024</div>
-        <div class="formation-content">
-            <h3>BTS Système Numérique</h3>
-            <p>Informatique et Réseau - Lycée Jules Verne, Mondeville</p>
+            <div class="formation-item">
+                <div class="formation-date">2022 - 2024</div>
+                <div class="formation-content">
+                    <h3>BTS Digital Systems</h3>
+                    <p>IT and Networking - Jules Verne High School, Mondeville</p>
+                </div>
+            </div>
+
+            <div class="formation-item">
+                <div class="formation-date">2019 - 2022</div>
+                <div class="formation-content">
+                    <h3>STI2D High School Diploma</h3>
+                    <p>Computer Science option - Jules Verne High School, Mondeville</p>
+                </div>
+            </div>
+        </ul>
+    </section>
+
+    <section id="competences">
+        <h2>Skills <i class="fa-solid fa-code"></i></h2>
+        <div class="competence-header" onclick="toggleCompetences()">
+            <span>View my skills</span>
+            <span class="plus-icon competences-icon">+</span>
         </div>
-    </div>
-
-    <div class="formation-item">
-        <div class="formation-date">2019 - 2022</div>
-        <div class="formation-content">
-            <h3>BAC STI2D</h3>
-            <p>Option Informatique - Lycée Jules Verne, Mondeville</p>
-        </div>
-    </div>
-    </ul>
-</section>
-
-<section id="competences">
-    <h2>Compétences</h2>
-    <div class="competence-header" onclick="toggleCompetences()">
-        <span>Voir mes compétences</span>
-        <span class="plus-icon competences-icon">+</span>
-    </div>
-    <ul id="competence-list" class="hidden">
-        <li>HTML/CSS</li>
-        <li>JavaScript</li>
-        <li>C++</li>
-        <li>Python</li>
-        <li>Git/GitHub</li>
-        <li>Angular</li>
-        <li>Visual Studio Code</li>
-        <li>Anglais niveau C1 + Anglais Technique</li>
-    </ul>
-</section>
-
+        <ul id="competence-list" class="hidden">
+            <li>HTML <i class="devicon-html5-plain"></i> / CSS <i class="devicon-css3-plain"></i></li>
+            <li>JavaScript <i class="devicon-javascript-plain"></i></li>
+            <li>C++ <i class="devicon-cplusplus-plain"></i></li>
+            <li>Python <i class="devicon-python-plain"></i></li>
+            <li>Git <i class="devicon-git-plain"> / GitHub <i class="devicon-github-original"></i></i></li>
+            <li>Angular <i class="devicon-angular-plain"></i></li>
+            <li>Visual Studio Code <i class="devicon-vscode-plain"></i></li>
+            <li>English level C1 + Technical English</li>
+        </ul>
+    </section>
 
     <section id="contact">
-        <h2>Contact</h2>
-        <p>Email : thomas.cagnion@gmail.com</p>
-        <p>Téléphone : +33</p>
+        <h2>Contact <i class="fa-solid fa-address-card"></i></h2>
+        <p>Email: thomas.cagnion@gmail.com</p>
+        <p>Phone: +33</p>
     </section>
 
     <footer>
-        <p>© 2025 -Thomas Cagnion</p>
-        <a href="assets/Thomas_Cagnion_CV.pdf" download="Thomas_Cagnion_CV.pdf" class="download-btn"> Télécharger mon CV (PDF)</a>
+        <p>© 2025 - Thomas Cagnion</p>
+        <a href="assets/Thomas_Cagnion_CV.pdf" download="Thomas_Cagnion_CV.pdf" class="download-btn"> Download my CV (PDF)</a>
         <button id="dark-mode-toggle" class="CouleurButton"><i class="fas fa-moon"></i></button>
-        <button id="SwitchAnglais" class="AnglaisButton"><i class="fas fa-globe"></i> Switch Français</button>
+        <button id="SwitchAnglais" class="AnglaisButton"><i class="fas fa-globe"></i> Switch to Français</button>
     </footer>
     <script src="app.js"></script>
 </body>
