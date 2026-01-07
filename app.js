@@ -1,23 +1,93 @@
-// Fonction pour afficher / masquer la section "Expérience"
-function toggleExperience() {
-    const list = document.getElementById("experience-list");
-    const icon = document.querySelector(".experience-icon");
+const experiencesData = {
+    fr: [
+        {
+            date: "2023",
+            title: "Stage de fin d'année 1ère année BTS 2023 (6 semaines)",
+            tasks: [
+                "Programmation en PHP/JavaScript",
+                "HTML/CSS",
+                "Amélioration du site internet de l'entreprise notamment du frontend",
+                "Utilisation de Git pour le versionnage du code"
+            ]
+        },
+        {
+            date: "2018",
+            title: "Stage de 3ème",
+            tasks: [
+                "Montage d'ordinateur",
+                "Apprentissage du réseau"
+            ]
+        }
+    ],
+    en: [
+        {
+            date: "2023",
+            title: "End-of-year internship – 1st year BTS (6 weeks)",
+            tasks: [
+                "PHP/JavaScript development",
+                "HTML/CSS",
+                "Improvement of the company website, mainly the frontend",
+                "Use of Git for code versioning"
+            ]
+        },
+        {
+            date: "2018",
+            title: "Middle school internship",
+            tasks: [
+                "Computer assembly",
+                "Basic networking learning"
+            ]
+        }
+    ]
+};
+const lang = window.location.pathname.includes("index_en") ? "en" : "fr";
+const experiences = experiencesData[lang];
 
-    if (list.classList.contains("hidden")) {
-        list.classList.remove("hidden", "hide");
-        list.classList.add("show");
-        icon.textContent = "−";
-    } else {
-        list.classList.remove("show");
-        list.classList.add("hide");
-        icon.textContent = "+";
-        // Supprime la classe "hidden" après la fin de l'animation
-        setTimeout(() => {
-            list.classList.add("hidden");
-            list.classList.remove("hide");
-        }, 300); // Doit correspondre à la durée de la transition en CSS
-    }
+        let currentExperienceIndex = 0;
+
+        // Fonction pour afficher une expérience
+        function displayExperience(index) {
+            const card = document.getElementById("experience-card");
+            const exp = experiences[index];
+            
+            const tasksHTML = exp.tasks.map(task => `<li>${task}</li>`).join('');
+            
+            card.innerHTML = `
+                <div class="experience-date">${exp.date}</div>
+                <h3>${exp.title}</h3>
+                <ul>${tasksHTML}</ul>
+            `;
+            
+        }
+
+        // Fonction pour naviguer vers l'expérience précédente
+        function previousExperience() {
+            currentExperienceIndex =
+                (currentExperienceIndex - 1 + experiences.length) % experiences.length;
+            displayExperience(currentExperienceIndex);
 }
+
+        // Fonction pour naviguer vers l'expérience suivante
+        function nextExperience() {
+            currentExperienceIndex =
+                (currentExperienceIndex + 1) % experiences.length;
+            displayExperience(currentExperienceIndex);
+}
+
+        // Fonction pour afficher/masquer le carrousel
+        function toggleExperience() {
+            const carousel = document.getElementById("experience-carousel");
+            const icon = document.querySelector(".experience-icon");
+
+            if (carousel.classList.contains("show")) {
+                carousel.classList.remove("show");
+                icon.textContent = "+";
+            } else {
+                carousel.classList.add("show");
+                icon.textContent = "−";
+                displayExperience(currentExperienceIndex);
+            }
+        }
 
 // Fonction pour afficher / masquer la section "Compétences"
 function toggleCompetences() {

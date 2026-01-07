@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon CV en ligne - Thomas Cagnion</title>
 </head>
-<body>
+  <body>
     <header>
-        <h1>Thomas Cagnion</h1>
-        <p>Développeur Junior</p>
         <link rel="stylesheet" href="style.css" >
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-          
+        <h1>Thomas Cagnion</h1>
+        <p>Développeur Junior</p>
     </header>
 
     <section id="presentation">
@@ -36,26 +35,21 @@
             <span>Voir mes Expériences</span>
             <span class="plus-icon experience-icon">+</span>
         </div>
-        <ul id="experience-list" class="hidden">
-            <div class="experience-item">
-                <div class="experience-date">2023</div>
-                <div class="experience-content">
-                    <h3>Stage de fin d'année 1er année BTS 2023 (6 semaines)</h3>
-                    <li>Programmation en PHP/JavaScript</li>
-                    <li>HTML/CSS</li>
-                    <li>Amélioration du site internet de l'entreprise notamment du frontend</li>
-                    <li>Utilisation de Git pour le versionnage du code</li>
+        <div id="experience-carousel" class="experience-carousel">
+            <div class="carousel-container">
+                <button class="carousel-arrow" id="prev-btn" onclick="previousExperience()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="experience-card" id="experience-card">
+                    <!-- Le contenu sera inséré dynamiquement -->
                 </div>
+                
+                <button class="carousel-arrow" id="next-btn" onclick="nextExperience()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
-            <div class="experience-item">
-                <div class="experience-date">2018</div>
-                <div class="experience-content">
-                    <h3>Stage de 3ème</h3>
-                    <li>Montage d'ordinateur</li>
-                    <li>Apprentissage du réseau</li>
-                </div>
-            </div>
-        </ul>
+        </div>
     </section>
 
     <section id="formation">
@@ -90,7 +84,7 @@
     </section>
 
     <section id="competences">
-        <h2 >Compétences <i class="fa-solid fa-code"></i></h2>
+        <h2>Compétences <i class="fa-solid fa-code"></i></h2>
         <div class="competence-header" onclick="toggleCompetences()">
             <span>Voir mes compétences</span>
             <span class="plus-icon competences-icon">+</span>
@@ -100,7 +94,7 @@
             <li>JavaScript <i class="devicon-javascript-plain"></i></li>
             <li>C++ <i class="devicon-cplusplus-plain"></i></li>
             <li>Python <i class="devicon-python-plain"></i></li>
-            <li>Git <i class="devicon-git-plain"> / GitHub <i class="devicon-github-original"></i></i></li>
+            <li>Git <i class="devicon-git-plain"></i> / GitHub <i class="devicon-github-original"></i></li>
             <li>Angular <i class="devicon-angularjs-plain"></i></li>
             <li>Visual Studio Code <i class="devicon-vscode-plain"></i></li>
             <li>Qt <i class="devicon-qt-original"></i></li>
@@ -121,5 +115,7 @@
         <button id="SwitchAnglais" class="AnglaisButton"><i class="fas fa-globe"></i> <span id="language-switch">Switch to English</span></button>
     </footer>
     <script src="app.js"></script>
-</body>
+    
+  </body>
+    
 </html>

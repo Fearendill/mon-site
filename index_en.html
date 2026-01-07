@@ -28,33 +28,26 @@
             </p>
         </div>
     </section>
-
+    
     <section id="experience">
-        <h2>Professional Experience <i class="fa-solid fa-user-tie"></i></h2>
+        <h2>Professional Experience  <i class="fa-solid fa-user-tie"></i></h2>
         <div class="experience-header" onclick="toggleExperience()">
             <span>View my experience</span>
             <span class="plus-icon experience-icon">+</span>
         </div>
-        <ul id="experience-list" class="hidden">
-            <div class="experience-item">
-                <div class="experience-date">2023</div>
-                <div class="experience-content">
-                    <h3>End-of-year internship – 1st year BTS 2023 (6 weeks)</h3>
-                    <li>PHP / JavaScript programming</li>
-                    <li>HTML / CSS</li>
-                    <li>Improvement of the company website, especially the frontend</li>
-                </div>
+        <div id="experience-carousel" class="experience-carousel">
+            <div class="carousel-container">
+                <button class="carousel-arrow" id="prev-btn" onclick="previousExperience()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="experience-card" id="experience-card"></div>
+                
+                <button class="carousel-arrow" id="next-btn" onclick="nextExperience()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
-
-            <div class="experience-item">
-                <div class="experience-date">2018</div>
-                <div class="experience-content">
-                    <h3>Middle school internship</h3>
-                    <li>Computer assembly</li>
-                    <li>Introduction to networking</li> 
-                </div>
-            </div>
-        </ul>
+        </div>
     </section>
 
     <section id="formation">
