@@ -3,8 +3,9 @@
     --text-color: #333333;
     --text-color-secondary: #2c3e50;
     --section-bg: #f9f9f9;
+    --section-li: #c2c2c2;
     --header-bg: #f4f4f4;
-    --border-color: #eeeeee;
+    --border-color: grey;
     --button-bg: #3498db;
     --button-hover: #2980b9;
 }
@@ -14,6 +15,7 @@
     --text-color: #f0f0f0;
     --text-color-secondary: #5bc9c9;
     --section-bg: #252525;
+    --section-li: #414040;
     --header-bg: #2d2d2d;
     --border-color: #444444;
     --button-bg: #4a6baf;
@@ -39,8 +41,7 @@ header {
     border-radius: 8px;
 }
 
-h1,
-h2 {
+h1, h2 {
     color: var(--text-color-secondary);
 }
 
@@ -83,8 +84,7 @@ section {
     font-weight: 600;
 }
 
-.presentation-content .qualites,
-.presentation-content .apprentissage {
+.presentation-content .qualites, .presentation-content .apprentissage {
     background-color: var(--bg-color);
     padding: 12px;
     border-left: 4px solid #3498db;
@@ -93,9 +93,7 @@ section {
 }
 
 /* Styles pour le carrousel d'expériences */
-.experience-header,
-.formation-header,
-.competence-header {
+.experience-header, .formation-header, .competence-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -106,8 +104,9 @@ section {
     margin-bottom: 10px;
 }
 
-.experience-header:hover,
-.formation-header:hover,
+.experience-header:hover, .formation-header:hover, .competence-header:hover {
+    background-color: var(--button-hover);
+}
 .competence-header:hover {
     background-color: var(--button-hover);
 }
@@ -200,8 +199,7 @@ section {
 }
 
 /* Styles pour Formation et Compétences */
-#formation-list,
-#competence-list {
+#formation-list, #competence-list {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-out, opacity 0.3s ease, transform 0.3s ease;
@@ -209,15 +207,13 @@ section {
     transform: translateY(-20px);
 }
 
-#formation-list.show,
-#competence-list.show {
+#formation-list.show, #competence-list.show {
     max-height: 500px;
     opacity: 1;
     transform: translateY(0);
 }
 
-#competence-list.hide,
-#formation-list.hide {
+#competence-list.hide, #formation-list.hide {
     max-height: 0;
     opacity: 0;
     transform: translateY(-20px);
@@ -254,10 +250,11 @@ section {
 }
 
 #competence-list li {
-    background-color: var(--section-bg);
+    background-color: var(--section-li);
     padding: 8px;
     margin-bottom: 5px;
     border-radius: 4px;
+    font-weight: bold;
 }
 
 .download-btn {
