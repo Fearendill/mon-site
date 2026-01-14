@@ -302,6 +302,7 @@ section {
     border-radius: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-size: large;
 }
 
 .AnglaisButton:hover {
@@ -310,6 +311,18 @@ section {
 
 .AnglaisButton i {
     margin-right: 8px;
+}
+.Github_Button {
+    display: inline-block;
+    margin-top: auto;
+    padding: 15px 15px;
+    background-color: var(--section-bg);
+    color: var(--text-color);
+    border: auto;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 20px;
 }
 
 footer {

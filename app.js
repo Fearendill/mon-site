@@ -190,3 +190,4 @@ function switchLanguage() {
 }
 
 document.getElementById("SwitchAnglais").addEventListener("click", switchLanguage);
+
