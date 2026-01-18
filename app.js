@@ -11,6 +11,15 @@ const experiencesData = {
             ]
         },
         {
+            date: "2023",
+            title: "Stage de fin d'année 1ère année BTS (6 semaines)",
+            tasks: [
+                "Lors de ce stage de 6 semaines j'ai travaillé sur le développement en PHP et JavaScript pour améliorer le site web de l'entreprise. J'ai principalement contribué à la partie frontend en utilisant HTML et CSS pour rendre le site plus attrayant et fonctionnel. De plus, j'ai utilisé Git pour gérer les versions du code, ce qui m'a permis de collaborer efficacement avec l'équipe de développement.",
+                "J'ai appris la méthode de travail Agile, ce qui m'a aidé à mieux organiser mes tâches et à m'adapter aux changements rapides dans le projet.",
+                "J'ai également eu l'occasion de travailler en équipe, ce qui m'a permis de développer mes compétences en communication et en collaboration."
+            ]
+        },
+        {
             date: "2018",
             title: "Stage de 3ème",
             tasks: [
@@ -28,6 +37,15 @@ const experiencesData = {
                 "HTML/CSS",
                 "Improvement of the company website, mainly the frontend",
                 "Use of Git for code versioning"
+            ]
+        },
+        {
+            date: "2023",
+            title: "End-of-year internship – 1st year BTS (6 weeks)",
+            tasks: [
+                "During this 6-week internship, I worked on PHP and JavaScript development to enhance the company's website. I primarily contributed to the frontend using HTML and CSS to make the site more appealing and functional. Additionally, I used Git for code versioning, which allowed me to collaborate effectively with the development team.",
+                "I learned the Agile working method, which helped me better organize my tasks and adapt to rapid changes in the project.",
+                "I also had the opportunity to work in a team, which allowed me to develop my communication and collaboration skills."
             ]
         },
         {
