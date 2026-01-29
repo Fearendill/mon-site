@@ -32,6 +32,50 @@ body {
     max-width: 800px;
     transition: background-color 0.5s ease, color 0.5s ease;
 }
+.cursor {
+            width: 10px;
+            height: 10px;
+            border: 2px solid var(--text-color);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.2s;
+            mix-blend-mode: difference;
+        }
+
+.cursor.active {
+    transform: scale(2);
+    background: var(--text-color);
+}
+
+.particle {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background: var(--text-color);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: particleFloat 15s infinite linear;
+            z-index: -1;
+        }
+
+        @keyframes particleFloat {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100px);
+                opacity: 0;
+            }
+        }
 
 header {
     text-align: center;
@@ -266,6 +310,7 @@ section {
     margin-bottom: 5px;
     border-radius: 4px;
     font-weight: bold;
+    font-size: large;
     transition: all 0.3s ease; /* Pour l'animation fluide */
     cursor: pointer;
 }

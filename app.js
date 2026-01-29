@@ -107,6 +107,30 @@ const experiences = experiencesData[lang];
             }
         }
 
+
+const cursor = document.querySelector('.cursor');
+        let mouseX = 0, mouseY = 0;
+        let cursorX = 0, cursorY = 0;
+// Suivi de la position de la souris
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+// Animation fluide du curseur
+        function animateCursor() {
+            cursorX += (mouseX - cursorX) * 0.35;
+            cursorY += (mouseY - cursorY) * 0.35;
+            cursor.style.left = cursorX - 10 + 'px';
+            cursor.style.top = cursorY - 10 + 'px';
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        document.querySelectorAll('a, button, .tech-tag').forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('active'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('active'));
+        });
+
 // Fonction pour afficher / masquer la section "Compétences"
 function toggleCompetences() {
     const list = document.getElementById("competence-list");
