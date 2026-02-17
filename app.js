@@ -105,7 +105,7 @@ const experiences = experiencesData[lang];
                 icon.textContent = "−";
                 displayExperience(currentExperienceIndex);
             }
-        }
+}
 
 
 const cursor = document.querySelector('.cursor');
