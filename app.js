@@ -105,7 +105,7 @@ const experiences = experiencesData[lang];
                 icon.textContent = "−";
                 displayExperience(currentExperienceIndex);
             }
-        }
+}
 
 
 const cursor = document.querySelector('.cursor');
@@ -233,3 +233,18 @@ function switchLanguage() {
 
 document.getElementById("SwitchAnglais").addEventListener("click", switchLanguage);
 
+let scrollToTopBtn = document.getElementById("scroll-to-top");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (window.pageYOffset > 100) {
+        scrollToTopBtn.style.display = "block";
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
