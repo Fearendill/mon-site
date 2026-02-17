@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fearendill.github.io/mon-site/sitemap.xml
