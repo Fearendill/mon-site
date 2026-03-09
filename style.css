@@ -416,7 +416,7 @@ section {
 .AnglaisButton i {
     margin-right: 8px;
 }
-.Github_Button {
+.Github_Button, .Linkedin_Button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -430,7 +430,7 @@ section {
     font-size: 32px;
 }
 
-.Github_Button a {
+.Github_Button a, .Linkedin_Button a {
     color: var(--text-color);
     text-decoration: none;
 }
