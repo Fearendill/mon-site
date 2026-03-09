@@ -58,6 +58,8 @@ const experiencesData = {
         }
     ]
 };
+
+
 const lang = window.location.pathname.includes("index_en") ? "en" : "fr";
 const experiences = experiencesData[lang];
 
@@ -107,6 +109,13 @@ const experiences = experiencesData[lang];
             }
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    const infoElement = document.querySelector(".Info");
+    if (infoElement) {
+        const currentYear = new Date().getFullYear();
+        infoElement.textContent = `© ${currentYear} - Thomas Cagnion`;
+    }
+});
 
 const cursor = document.querySelector('.cursor');
         let mouseX = 0, mouseY = 0;
